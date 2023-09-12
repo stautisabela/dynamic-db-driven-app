@@ -2,50 +2,30 @@
 <html>
     <head>
         <title>Demo application</title>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <style>
-            #container{
-                max-width: 1000px;
-                margin:0 auto;
-            }
-
-            h1{
-                font-size:60px;
-                font-family: 'Courier New', Courier, monospace;
-                font-weight: bold;
-                color: rgb(100, 100, 100);
-                text-align: center;
-            }
-
             #banner{
-                width: 100%;
                 height: 250px;
+                width: 100%;
                 object-fit: cover;
             }
-
-            h2{
-                font-size:32px;
-                font-family: 'Courier New', Courier, monospace;
-                text-align: center;
-            }
-
-            .bodytext{
-                font-size: 20px;
-                font-family: sans-serif;
-            }
-           
         </style>
     </head>
     <body>
-        <div id="container">
-            <h1>Demo application</h1>
-            <img id="banner" src="/static/img/banner.jpeg">
+        <div class="container">
+            <h1 class="text-center my-4">Demo application</h1>
+            <img class="img-fluid" id="banner" src="/static/img/banner.jpeg">
 
-            <h2>About this application</h2>
-            <p class="bodytext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero fugit iure, nesciunt quibusdam non aspernatur amet pariatur adipisci debitis veritatis eaque reprehenderit distinctio mollitia placeat est sapiente similique maxime?</p>
+            <h2 class="text-center my-4">About this application</h2>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero fugit iure, nesciunt quibusdam non aspernatur amet pariatur adipisci debitis veritatis eaque reprehenderit distinctio mollitia placeat est sapiente similique maxime?</p>
             
-            <div style="text-align:center">
-                <button id="button">This is a button</button>
+            <div class="text-center my-4">
+                <button class="btn btn-secondary">This is a button</button>
+                <p class="mt-4">Copyright 2023 blah blah blah</p>
             </div>
+            
         </div>
     </body>
 </html>
