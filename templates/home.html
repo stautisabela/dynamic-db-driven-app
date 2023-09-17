@@ -21,6 +21,12 @@
             <h2 class="text-center my-4">About this application</h2>
             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero fugit iure, nesciunt quibusdam non aspernatur amet pariatur adipisci debitis veritatis eaque reprehenderit distinctio mollitia placeat est sapiente similique maxime?</p>
             
+            <h2 class="text-center my-4">Silly examples of people</h2>
+            <div>
+                {% for person in people %}
+                {% include 'personitem.html' %}
+                {% endfor %}
+            </div>
             <div class="text-center my-4">
                 <button class="btn btn-secondary">This is a button</button>
                 <p class="mt-4">Copyright 2023 blah blah blah</p>

@@ -1,0 +1,7 @@
+<div class="border-bottom" style="margin-bottom: 16px; padding-bottom:4px;">
+    <h4 style="color:rgb(120,120,120); margin-bottom:4px">{{person['name']}}</h4>
+    <div><b>Nationality:</b> {{person['nationality']}}</div>
+    {% if 'age' in person %}
+        <div><b>Age:</b> {{person['age']}} years old</div>
+    {% endif %}
+</div>
