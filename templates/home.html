@@ -14,13 +14,22 @@
         </style>
     </head>
     <body>
+        {% include 'navbar.html' %}
         <div class="container">
             <h1 class="text-center my-4">Demo application</h1>
             <img class="img-fluid" id="banner" src="/static/img/banner.jpeg">
 
             <h2 class="text-center my-4">About this application</h2>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero fugit iure, nesciunt quibusdam non aspernatur amet pariatur adipisci debitis veritatis eaque reprehenderit distinctio mollitia placeat est sapiente similique maxime?</p>
-            
+            <div class="row">
+                <div class="col-6">
+                    <p class="lead">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab libero fugit iure, nesciunt quibusdam non aspernatur amet pariatur adipisci debitis veritatis eaque reprehenderit distinctio mollitia placeat est sapiente similique maxime? Nisi lacus sed viverra tellus. Consectetur adipiscing elit ut aliquam purus sit amet. Libero enim sed faucibus turpis in. Commodo odio aenean sed adipiscing diam donec. Commodo elit at imperdiet dui accumsan sit amet. Eget nullam non nisi est sit amet facilisis magna. Gravida cum sociis natoque penatibus. Lorem dolor sed viverra ipsum nunc aliquet. Urna et pharetra pharetra massa. Ut ornare lectus sit amet est placerat in. Sed viverra tellus in hac habitasse platea dictumst vestibulum. Non odio euismod lacinia at quis risus. Nec feugiat in fermentum posuere. Pellentesque adipiscing commodo elit at imperdiet.
+                    </p>
+                </div>
+                <div class="d-none d-md-block col-6" style="text-align: end;">
+                    <img src="/static/img/bunny.jpg" style="height: 350px; border-radius: 5px;">
+                </div>
+            </div>
             <h2 class="text-center my-4">Silly examples of people</h2>
             <div>
                 {% for person in people %}
@@ -28,10 +37,9 @@
                 {% endfor %}
             </div>
             <div class="text-center my-4">
-                <button class="btn btn-secondary">This is a button</button>
-                <p class="mt-4">Copyright 2023 blah blah blah</p>
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">This is a button</button>
             </div>
-            
         </div>
+        {% include 'footer.html' %}
     </body>
 </html>
