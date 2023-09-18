@@ -30,10 +30,10 @@
                     <img src="/static/img/bunny.jpg" style="height: 350px; border-radius: 5px;">
                 </div>
             </div>
-            <h2 class="text-center my-4">Silly examples of people</h2>
+            <h2 class="text-center my-4">Information on bunnies</h2>
             <div>
-                {% for person in people %}
-                {% include 'personitem.html' %}
+                {% for bunny in bunnies %}
+                {% include 'bunnyitem.html' %}
                 {% endfor %}
             </div>
             <div class="text-center my-4">

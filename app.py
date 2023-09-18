@@ -2,37 +2,36 @@ from flask import Flask, render_template, jsonify
 
 app=Flask(__name__)
 
-PEOPLE=[
+BUNNIES=[
     {'id': 1,
-     'name': 'Bela',
-     'age': 27,
-     'nationality': 'brazilian'
-     },
+     'species': 'Holland Lop',
+     'origin': 'Netherlands',
+     'weight': '1.4 to 2'
+    },
      {'id': 2,
-     'name': 'Maria',
-     'age': 26,
-     'nationality': 'russian'
+     'species': 'Lionhead',
+     'origin': 'USA',
+     'weight': '1.1 to 1.7'
      },
      {'id': 3,
-     'name': 'Carlos',
-     'age': 32,
-     'nationality': 'mexican'
-     },
-     {'id': 4,
-     'name': 'Anne',
-     'age': 31,
-     'nationality': 'swedish'
+     'species': 'Dwarf Papillon',
+     'origin': 'France',
+     'weight': '1 to 1.9'
+     },{'id': 4,
+     'species': 'Pigmy rabbit',
+     'origin': 'USA',
+     'weight': '0.3 to 0.5'
      },
 ]
 
 @app.route("/")
 def index():
     return render_template('home.html',
-                            people=PEOPLE)
+                            bunnies=BUNNIES)
 
-@app.route("/api/people")
+@app.route("/api/bunnies")
 def list_people():
-    return jsonify(PEOPLE)
+    return jsonify(BUNNIES)
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,7 @@
+<div class="border-bottom" style="margin-bottom: 16px; padding-bottom:4px;">
+    <h4 style="color:rgb(120,120,120); margin-bottom:4px">{{bunny['species']}}</h4>
+    <div><b>Origin:</b> {{bunny['origin']}}</div>
+    {% if 'weight' in bunny %}
+        <div><b>Weight:</b> {{bunny['weight']}}kg</div>
+    {% endif %}
+</div>
